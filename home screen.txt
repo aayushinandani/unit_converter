@@ -1,0 +1,44 @@
+package com.example.unit_converter;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class home_screen extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home_screen);
+        Button btnLength, btnTemperature, btnWeight, btnTime, btnArea, btnVolume;
+
+            // Initialize buttons
+            btnLength = findViewById(R.id.btnLength);
+            btnTemperature = findViewById(R.id.btnTemperature);
+            btnWeight = findViewById(R.id.btnWeight);
+            btnTime = findViewById(R.id.btnTime);
+            btnArea = findViewById(R.id.btnArea);
+            btnVolume = findViewById(R.id.btnVolume);
+
+            // Set click listeners
+            btnLength.setOnClickListener(v -> openConverter("Length"));
+            btnTemperature.setOnClickListener(v -> openConverter("Temperature"));
+            btnWeight.setOnClickListener(v -> openConverter("Weight"));
+            btnTime.setOnClickListener(v -> openConverter("Time"));
+            btnArea.setOnClickListener(v -> openConverter("Area"));
+            btnVolume.setOnClickListener(v -> openConverter("Volume"));
+        }
+
+        // Method to open main logic screen
+        private void openConverter(String category) {
+            Intent intent = new Intent(home_screen.this, converter.class);
+            intent.putExtra("CATEGORY", category);
+            startActivity(intent);
+        }
+    }
