@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/background"
+    tools:context=".home_screen">
+
+    <!-- App Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unit Converter"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:paddingBottom="16dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a Category"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="#37474F"
+        android:paddingBottom="24dp" />
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/btnLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Length"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Area"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnVolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volume" />
+
+</LinearLayout>
